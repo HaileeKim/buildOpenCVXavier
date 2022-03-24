@@ -2,7 +2,7 @@
 # License: MIT. See license file in root directory
 # Copyright(c) JetsonHacks (2017-2018)
 
-OPENCV_VERSION=3.4.3
+OPENCV_VERSION=3.3.1
 # Jetson AGX Xavier
 ARCH_BIN=7.2
 # Jetson TX2
@@ -125,6 +125,13 @@ if [ $DOWNLOAD_OPENCV_EXTRAS == "YES" ] ; then
  cd opencv_extra
  git checkout -b v${OPENCV_VERSION} ${OPENCV_VERSION}
 fi
+
+
+#edit opencv-3.4.1 to opencv-3.3.1
+cd
+git clone https://giuthub.com/AveesLab/OpenCV-3.3.1.git
+mv OpenCV-3.3.1/modules/ $OPENCV_SOURCE_DIR/modules
+
 
 cd $OPENCV_SOURCE_DIR/opencv
 mkdir build
