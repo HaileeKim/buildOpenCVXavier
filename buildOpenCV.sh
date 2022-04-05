@@ -127,10 +127,10 @@ if [ $DOWNLOAD_OPENCV_EXTRAS == "YES" ] ; then
 fi
 
 
-#edit opencv-3.4.1 to opencv-3.3.1
-cd
-git clone https://giuthub.com/AveesLab/OpenCV-3.3.1.git
-mv OpenCV-3.3.1/modules/ $OPENCV_SOURCE_DIR/modules
+
+
+
+
 
 
 cd $OPENCV_SOURCE_DIR/opencv
